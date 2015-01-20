@@ -15,7 +15,7 @@
     <br>
     <div id='container' ng-controller="showTasksController">
       <div class='task' ng-repeat='task in data.tasks'>
-        <input type="checkbox" ng-model="checkbox"><span ng-click="deleteTask($index)">{{ task }}</span>
+        <input type="checkbox" ng-model="checkbox" ng-click="completeTask($index)"><span ng-click="deleteTask($index)">{{ task }}</span>
       </div>
     </div>
 
