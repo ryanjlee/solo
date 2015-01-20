@@ -1,10 +1,24 @@
+html {
+  height: 100%;
+}
+
 body {
   background-image: url(NotePaper.png);
   background-repeat: no-repeat;
+  background-position: 50% 40%;
+  height: 100%;
+  width: 561px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .note-paper-container {
-  margin: 62px 50px;
+  display: block;
+  width: 30em;
+  margin-left: auto;
+  margin-right: auto;
+  display: 100%;
+  /*margin: 62px 50px;*/
 }
 
 /*.example-animate-container {
