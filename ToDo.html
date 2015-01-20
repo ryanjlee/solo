@@ -1,25 +1,30 @@
 <!DOCTYPE html>
 <html ng-app='toDoList'>
   <head>
-    <meta charset="utf-8" />
+    <meta charset='utf-8' />
+    <link href='style.css' rel='stylesheet' type='text/css'>
   </head>
   <body>
-    <h1>To-Do List</h1>
     
-    <div id='container' ng-controller="addTaskController">
-      <form name="taskForm" ng-submit='addTask()'>
-        <input type='text' placeholder='add task' ng-model='tasks.task'>
-        <input type='submit' value='Submit'>
-      </form>
-    </div>
-    <br>
-    <div id='container' ng-controller="showTasksController">
-      <div class='task' ng-repeat='task in data.tasks'>
-        <input type="checkbox" ng-model="checkbox" ng-click="completeTask($index)"><span ng-click="deleteTask($index)">{{ task }}</span>
+    <div class='note-paper-container' id='container'>
+      <h1>To-Do List</h1>
+      <div id='container' ng-controller='addTaskController'>
+        <form name='taskForm' ng-submit='addTask()'>
+          <input type='text' placeholder='add task' ng-model='tasks.task'>
+          <input type='submit' value='Submit'>
+        </form>
+      </div>
+      <br>
+      <div class='example-animate-container' id='container' ng-controller='showTasksController'>
+        <div class='animate-repeat' ng-repeat='task in data.tasks'>
+          <input type='checkbox' ng-model='checkbox' ng-click='completeTask($index)'><span ng-click='deleteTask($index)'>{{ task }}</span>
+        </div>
       </div>
     </div>
+    
+    <script src='bower_components/angular/angular.js'></script>
+    <script src='bower_components/angular-animate/angular-animate.js'></script>
 
-    <script src="bower_components/angular/angular.js"></script>
-    <script src="app.js"></script>
+    <script src='app.js'></script>
   </body>
 </html>
