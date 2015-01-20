@@ -10,6 +10,7 @@ angular.module('toDoList', [
 
   $scope.addTask = function(){
     Tasks.addTask($scope.tasks);
+    $scope.tasks.task = '';
   };
 })
 

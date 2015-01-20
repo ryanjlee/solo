@@ -7,7 +7,7 @@
     <h1>To-Do List</h1>
     
     <div id='container' ng-controller="addTaskController">
-      <form ng-submit='addTask()'>
+      <form name="taskForm" ng-submit='addTask()'>
         <input type='text' placeholder='add task' ng-model='tasks.task'>
         <input type='submit' value='Submit'>
       </form>
@@ -15,7 +15,6 @@
     <br>
     <div id='container' ng-controller="showTasksController">
       <div class='task' ng-repeat='task in data.tasks'>
-        <!-- <p ng-click="deleteTask($index)">{{ task }}</p> -->
         <input type="checkbox" ng-model="checkbox"><span ng-click="deleteTask($index)">{{ task }}</span>
       </div>
     </div>
