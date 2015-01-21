@@ -19,16 +19,7 @@ body {
   margin-right: auto;
   display: 100%;
   margin-top: 62px;
-  /*margin: 62px 50px;*/
 }
-
-/*.example-animate-container {
-  background:white;
-  border:1px solid black;
-  list-style:none;
-  margin:0;
-  padding:0 10px;
-}*/
 
 .animate-repeat {
   line-height:36px;

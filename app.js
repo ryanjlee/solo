@@ -42,19 +42,22 @@ angular.module('toDoList', [
 })
 
 .factory('Tasks', function (){
-  var taskList = ['eat', 'sleep', 'brush teeth', 'take a shower', 'buy bananas', 'stuff', 'more stuff', 'more other stuff'];
-  var feelGoodQuotes = ['Complete!', 'Good job!', 'Niiiiice!', 'Grrrrrrrreat!', 'You did it!', 'Kick ass!', 'Boom, there it is!', 'Awwwwww yeaaaaaaah!', 'You\'re awesome!', 'Holy shit, you\'re killing it!', 'Fuck yeah!', 'Don\'t have to deal with that shit anymore!'];
+  var taskList = ['eat', 'sleep', 'write a blog', 'brush teeth', 'buy bananas', 'get paid', 'stuff', 'more stuff', 'more other stuff'];
+  var feelGoodQuotes = ['Nice!', 'Great job!', 'You did it!', 'You\'re awesome!', 'Awwwwww yeaaaaaaah!', 'Fuck yeah!', 'Don\'t have to deal with that shit anymore!', 'Kick ass!', 'Grrrrrrrreat!', 'Holy shit, you\'re killing it!', 'Complete!', 'Boom, there it is!'];
 
   var getTasks = function(){
     return taskList;
   };
 
   var addTask = function(tasks){
-  	taskList.push(tasks.task);
+    taskList.push(tasks.task);
   };
 
+  var counter = 0;
   var congratulate = function(){
-    var num = Math.floor(Math.random() * feelGoodQuotes.length);
+    counter++;
+    var num = counter;
+    // var num = Math.floor(Math.random() * feelGoodQuotes.length);
     return feelGoodQuotes[num];
   };
 
